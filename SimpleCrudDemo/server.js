@@ -24,13 +24,13 @@ var port = process.env.PORT || 3000;
 var router = express.Router();
 
 
-// Create endpoint handlers for /beers
+// Create endpoint handlers for /recipes
 router.route('/recipes')
   .post(recipeController.postRecipes)
   .get(recipeController.getRecipes);
 
-// Create endpoint handlers for /beers/:beer_id
-router.route('/recipes/:beer_id')
+// Create endpoint handlers for /recipes/:recipe_id
+router.route('/recipes/:recipe_id')
   .get(recipeController.getRecipe)
   .put(recipeController.putRecipe)
   .delete(recipeController.deleteRecipe);
